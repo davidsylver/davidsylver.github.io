@@ -1,0 +1,248 @@
+html {
+  font-size: 62.5%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-size: 3rem;
+}
+/* UTILiTiEs */
+
+.ct {
+  margin-left: auto;
+  margin-right: auto;
+}
+.fx {
+  display: flex;
+}
+:root {
+  --bb: 1px solid blue;
+  --bg: 2px solid green;
+  --br: 2px solid red;
+}
+
+/* mobiles Styles */
+.app {
+  width: 100%;
+  height: 100%;
+  border: var(--bb);
+}
+.view {
+  height: 100%;
+}
+.main_view {
+  position: relative;
+  display: grid;
+  grid-template-rows: 16% 84%; 
+}
+.header {
+  display: grid;
+  grid-template-rows: auto auto;
+  background: skyblue;
+  background: linear-gradient(150deg, #49ff95, #47e388);
+  background: linear-gradient(150deg, #b6feaf,#55ff9c);
+  color: #fff;
+  text-align: center; 
+  font-size: 2rem;
+}
+.header_top {
+  /* border: var(--bb);  */
+  padding: 2rem;
+  justify-content: space-between;
+}
+.logo {
+  font-weight: bold;
+}
+.h_lt_col {
+  align-items: center;
+  /* border: var(--bb); */
+  height: fit-content;
+}
+.searchBar {
+ color: orange;
+ font-size: 1.5rem;
+}
+.searchBar_icon {
+  display: block;
+  width: 2.1rem;
+  height: 2.5rem;
+}
+.menu_btn {
+  padding-left: 3rem;
+  position: relative;
+  cursor: pointer;
+} 
+.menu_btn:hover .menu_list {
+  display: block;
+}
+.menu_dots {
+  /* border: var(--bb); */
+  width: 1rem;
+}
+.dot {
+  width: .67rem;
+  height: .67rem;
+  border-radius: 50%;
+  background: #fff;
+}
+.dot:not(:last-child) {
+  margin-bottom: 2px;
+}
+.menu_list {
+  position: absolute;
+  color: rgb(36, 36, 36);
+  border-radius: 2px;
+  right: 0;
+  display: none;
+  font-size: 2rem;
+  width: 29rem;
+  text-align: left;
+  background: #fff;
+  box-shadow: -1rem 1rem 4rem rgba(0, 0, 0, 0.105), 
+              -1rem 0 2rem rgba(0, 0, 0, 0.064),
+              -1rem 1rem 4rem  rgba(0, 0, 0, 0.064);
+}
+.menu_listItem {
+  padding: 2rem;
+  transition: background,transform .25s ease-out;
+}
+.menu_listItem:hover {
+  background: rgb(247, 247, 247);
+  color: orange;
+  transform: scale(1.1);
+}
+.menu_listItem:not(:last-child) {
+  /* margin-bottom: .6rem; */
+}
+
+.contact_type {
+  flex-grow: 1;
+  width: 50%;
+  color: rgb(249, 249, 249);
+  transition: border-bottom .25s ease;
+  cursor: pointer;
+  border: var(--bb);
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  font-weight: bold;
+  height: 100%;
+}
+.contact_type::before {
+  display: block;
+  border-bottom: 5px solid transparent;
+  padding: 2rem 0 .7rem;
+  width: 62%;
+  /* border: var(--br); */
+  
+  margin: 0 auto;
+}
+.allContacts_label::before {
+  content: "All";
+}
+.favoriteContacts_label::before {
+  content: "Favorites";
+}
+.contact_typeShow::before {
+  border-bottom-color: rgb(255, 205, 79);
+}
+
+.newContact_btn {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.318); 
+  background: rgb(252, 215, 68);
+  position: absolute;
+  bottom: 10%;
+  right: 7%;
+}
+
+.main {
+  height: 100%;
+  background: orange;
+  background: #fafcc2;
+}
+.contact_list {
+  overflow: scroll;
+  border: var(--bg);
+  height: 100%;
+}
+.contact_order {
+  border: var(--bb);
+  padding: 2rem 2rem;
+}
+.contact_orderItem {
+  display: flex;
+}
+.contact_orderKey {
+  font-size: 2.5rem;
+  color: rgb(138, 138, 138); 
+  margin-right: 3rem;
+  border: var(--bb);
+  height: fit-content;
+}
+.contact_orderValues {
+  font-size: 2rem;
+  flex-grow: 1;
+}
+.scrolled_list {
+  margin-left: 4rem;
+}
+.contact {
+  padding: 0 0 2.5rem;
+  /* border: var(--bb); */
+  width: 100%;
+  align-items: center;
+}
+.contact_initial {
+  width: 7.5rem;
+  height: 7.5rem;
+  line-height: 7.5rem;
+  border-radius: 50%;
+  background: rgb(255, 183, 0);
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  font-size: 3.55rem;
+}
+.contact_profilePic {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background:skyblue;
+  margin-right: 1.45rem;
+}
+.contact_profilePic_img {
+  width: 100%;
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+}
+.contact_name {
+  font-size: 1.6rem;
+  color: #353535;
+  font-family: sans-serif;
+}
+.fav_contacts {
+  border: var(--bb);
+  padding: 2rem 1.5rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.fav_contact_profilePic {
+  margin-bottom: 1rem;
+}
+.fav_contact_name {
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  .app {
+    width: 40%;
+  }
+  .dot {
+    width: .8rem;
+    height: .8rem;
+  }
+}
